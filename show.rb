@@ -4,8 +4,8 @@
 class Show < Formula
   desc ""
   homepage ""
-  url "https://github.com/Mrzrb/show/releases/download/0.12/show_0.12_darwin_amd64.tar.gz"
-  sha256 "071641f9fa0aad06e40136738b79820a3b29bc33cb5fa1f13d23c41411baa39d"
+  url "https://github.com/Mrzrb/show/raw/master/build/darwin/show_0.1.tar.gz"
+  sha256 "2d40084ae300f8c5c977831814fd88166218beec91e6b77e8643430776ea8393"
   license ""
 
   # depends_on "cmake" => :build
@@ -13,8 +13,8 @@ class Show < Formula
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    bin.install "show"
     # system "cmake", ".", *std_cmake_args
+    bin.install "show"
   end
 
   test do
@@ -30,3 +30,4 @@ class Show < Formula
     system "false"
   end
 end
+
